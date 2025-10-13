@@ -126,7 +126,8 @@
             modalContainer.classList.remove('hidden');
             searchInput.focus();
             if (!pagefind) {
-                pagefind = await import('/pagefind/pagefind.js');
+                const importer = new Function('path', 'return import(path)');
+                pagefind = await importer('/pagefind/pagefind.js');
             }
         };
 

@@ -14,6 +14,9 @@ export default defineConfig({
             rollupOptions: {
                 external: ['/pagefind/pagefind.js']
             }
+        },
+        ssr: {
+            external: ['/pagefind/pagefind.js']
         }
     }
 });
