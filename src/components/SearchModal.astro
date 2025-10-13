@@ -120,13 +120,13 @@
             return;
         }
 
-        let pagefind;
+        let pagefind: any;
 
         const showModal = async () => {
             modalContainer.classList.remove('hidden');
             searchInput.focus();
             if (!pagefind) {
-                pagefind = await import('/pagefind/pagefind.js');
+                pagefind = await import('pagefind');
             }
         };
 
